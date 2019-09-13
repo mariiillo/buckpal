@@ -8,7 +8,7 @@ require 'dry-validation'
 class SendMoneyCommand < Dry::Validation::Contract
   params do
     required(:source_account_id).value(:integer)
-    required(:source_target_id).value(:integer)
+    required(:target_account_id).value(:integer)
     required(:amount).value(:integer)
   end
 end
