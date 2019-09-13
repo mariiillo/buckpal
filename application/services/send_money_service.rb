@@ -4,7 +4,7 @@
 class SendMoneyService
   AccountNotFound = Class.new(StandardError)
 
-  def send_money(command)
+  def call(command)
     # TODO: validate business rules.
     check_existence_of(command.source_account_id)
     check_existence_of(command.target_account_id)
